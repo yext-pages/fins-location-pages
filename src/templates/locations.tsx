@@ -10,19 +10,20 @@ import "../index.css";
 import HorizontalStack from "../components/HorizontalStack";
 import HeroImage from "../components/HeroImage";
 import Footer from "../components/Footer";
-import ContactInfo from "../components/ContactInfo";
 import { LocationMap } from "@yext/pages/components";
 import { GoogleMaps } from "@yext/components-tsx-maps";
 import Articles from "../components/Articles";
 import MapDescription from "../components/MapDescription";
 import ItemsGrid from "../components/ItemsGrid";
 import Item from "../components/Item";
+import HeroSection from "../components/HeroSection";
+import AdvisorInfo from "../components/AdvisorInfo";
 export const config: TemplateConfig = {
   stream: {
     $id: "locations",
     localization: { locales: ["en"], primary: false },
     filter: { entityTypes: ["location"] },
-    fields: ["name", "description", "slug", "photoGallery", "logo", "fins_relatedServices.name", "emails", "address", "mainPhone", "geocodedCoordinate", "fins_relatedServices.description", "fins_relatedServices.fins_servicesImage", "fins_featuredArticles.name", "fins_featuredArticles.shortDescription", "fins_featuredArticles.fins_articlePhoto"],
+    fields: ["name", "description", "slug", "photoGallery", "logo", "fins_relatedServices.name", "emails", "address", "mainPhone", "geocodedCoordinate", "fins_relatedServices.description", "fins_relatedServices.fins_servicesImage", "fins_featuredArticles.name", "fins_featuredArticles.shortDescription", "fins_featuredArticles.fins_articlePhoto", "fins_relatedProfessionals.name", "fins_relatedProfessionals.headshot", "fins_relatedProfessionals.fins_jobTitle", "fins_relatedProfessionals.description", "fins_relatedProfessionals.emails"],
   },
 };
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
@@ -61,28 +62,47 @@ export default function Professional({ document, __meta }: TemplateProps) {
         logo={document.logo.image.url}
         backgroundColor="#fff"
         />
-          <HorizontalStack
-            spacing="1"
-            topMargin="0"
-            bottomMargin="0"
-            leftMargin="0"
-            rightMargin="0"
-            alignment="center" 
-            verticalOnMobile="false"
-            backgroundColor="#1C2E5E"
-            backgroundImage={document.photoGallery[0]?.image.url}          
-            >
-        <ContactInfo
+        <HeroSection
+        backgroundImage={document.photoGallery[0].image.url}
         name={document.name}
-        title={document.name}
+        city={document.address.city}
         addressLine1={document.address.line1}
         addressLine2={`${document.address.city}, ${document.address.region} ${document.address.postalCode}`}
         email={document.emails[0]}
         phone={formattedPhone}
         textColor="#fff"
         >       
-        </ContactInfo>
+        </HeroSection>
+        <HorizontalStack backgroundColor="#F9FAFB" spacing={"0"} leftMargin={"0"} rightMargin={"0"} topMargin={"0"} bottomMargin={"0"} alignment={"top"} verticalOnMobile={"true"}>
+        <HeroImage src={document.fins_relatedProfessionals[0].headshot.url} alt={""} leftPadding={"0"}></HeroImage>
+        <AdvisorInfo
+        name={document.fins_relatedProfessionals[0].name}
+        title={document.fins_relatedProfessionals[0].fins_jobTitle}
+        email={document.fins_relatedProfessionals[0].emails}
+        description={document.fins_relatedProfessionals[0].description}
+        textColor="#333333"
+        >
+        </AdvisorInfo>
         </HorizontalStack>
+        <ItemsGrid 
+        title="Our Services"
+        columns={3}>
+          <Item
+            name={document.fins_relatedServices[0].name}
+            image={document.fins_relatedServices[0]?.fins_servicesImage.url}
+            description={document.fins_relatedServices[0]?.description}
+          />
+          <Item
+            name={document.fins_relatedServices[1]?.name}
+            image={document.fins_relatedServices[1]?.fins_servicesImage.url}
+            description={document.fins_relatedServices[1]?.description}
+          />
+          <Item
+            name={document.fins_relatedServices[2]?.name}
+            image={document.fins_relatedServices[2]?.fins_servicesImage.url}
+            description={document.fins_relatedServices[2]?.description}
+          />
+        </ItemsGrid>
         <VerticalStack
           alignment="left"
           rightMargin="0"
@@ -107,25 +127,6 @@ export default function Professional({ document, __meta }: TemplateProps) {
             bottomMargin="6"
           />
         </VerticalStack>
-        <ItemsGrid 
-        title="Services Offered"
-        columns={3}>
-          <Item
-            name={document.fins_relatedServices[0].name}
-            image={document.fins_relatedServices[0]?.fins_servicesImage.url}
-            description={document.fins_relatedServices[0]?.description}
-          />
-          <Item
-            name={document.fins_relatedServices[1]?.name}
-            image={document.fins_relatedServices[1]?.fins_servicesImage.url}
-            description={document.fins_relatedServices[1]?.description}
-          />
-          <Item
-            name={document.fins_relatedServices[2]?.name}
-            image={document.fins_relatedServices[2]?.fins_servicesImage.url}
-            description={document.fins_relatedServices[2]?.description}
-          />
-        </ItemsGrid>
         <Title
             value={`Insights`}
             textSize="4xl"

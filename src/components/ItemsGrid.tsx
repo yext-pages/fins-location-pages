@@ -14,7 +14,7 @@ export const initialProps: ItemsGridProps = {
 const Items = ({ title, children, columns }: ItemsGridProps) => {
   return (
     <div className="p-4">
-      <h2 className="text-lg text-center font-bold text-gray-900">{title}</h2>
+      <h2 className="text-lg text-center font-medium text-4xl text-[#1C2E5E]">{title}</h2>
       <ul
         role="list"
         className={`grid grid-cols-3 gap-x-8`}

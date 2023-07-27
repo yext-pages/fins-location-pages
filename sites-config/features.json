@@ -45,7 +45,11 @@
         "fins_relatedServices.fins_servicesImage",
         "fins_featuredArticles.name",
         "fins_featuredArticles.shortDescription",
-        "fins_featuredArticles.fins_articlePhoto"
+        "fins_featuredArticles.fins_articlePhoto",
+        "fins_relatedProfessionals.name",
+        "fins_relatedProfessionals.headshot",
+        "fins_relatedProfessionals.fins_jobTitle",
+        "fins_relatedProfessionals.description"
       ]
     }
   ]
