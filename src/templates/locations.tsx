@@ -17,10 +17,10 @@ import Articles from "../components/Articles";
 import MapDescription from "../components/MapDescription";
 export const config: TemplateConfig = {
   stream: {
-    $id: "professionals",
+    $id: "locations",
     localization: { locales: ["en"], primary: false },
-    filter: { entityTypes: ["financialProfessional"] },
-    fields: ["name", "description", "headshot", "slug", "photoGallery", "fins_jobTitle", "logo", "fins_relatedServices.name", "emails", "address", "mainPhone", "geocodedCoordinate", "fins_relatedServices.description", "fins_relatedServices.fins_servicesImage", "fins_featuredArticles.name", "fins_featuredArticles.shortDescription", "fins_featuredArticles.fins_articlePhoto"],
+    filter: { entityTypes: ["location"] },
+    fields: ["name", "description", "slug", "photoGallery", "logo", "fins_relatedServices.name", "emails", "address", "mainPhone", "geocodedCoordinate", "fins_relatedServices.description", "fins_relatedServices.fins_servicesImage", "fins_featuredArticles.name", "fins_featuredArticles.shortDescription", "fins_featuredArticles.fins_articlePhoto"],
   },
 };
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
@@ -59,7 +59,7 @@ export default function Professional({ document, __meta }: TemplateProps) {
         logo={document.logo.image.url}
         backgroundColor="#fff"
         />
-          <HorizontalStack
+          {/* <HorizontalStack
             spacing="1"
             topMargin="0"
             bottomMargin="0"
@@ -85,8 +85,8 @@ export default function Professional({ document, __meta }: TemplateProps) {
         textColor="#fff"
         >       
         </ContactInfo>
-        </HorizontalStack>
-        <VerticalStack
+        </HorizontalStack> */}
+        {/* <VerticalStack
           alignment="left"
           rightMargin="0"
           leftMargin="0"
@@ -109,7 +109,7 @@ export default function Professional({ document, __meta }: TemplateProps) {
             fontWeight="normal"
             bottomMargin="6"
           />
-        </VerticalStack>
+        </VerticalStack> */}
         {/* <ItemsGrid 
         title="Services Offered"
         columns={3}>
@@ -147,7 +147,7 @@ export default function Professional({ document, __meta }: TemplateProps) {
             backgroundColor="#F9FAFB"
             textColor="#1C2E5E"
           />
-        <GridContainer
+        {/* <GridContainer
         backgroundColor="#F9FAFB"
         >
 
@@ -182,8 +182,8 @@ export default function Professional({ document, __meta }: TemplateProps) {
         fill="white"
       />
     </svg>}
-            </LocationMap>
-        </GridContainer>
+            </LocationMap> */}
+        {/* </GridContainer> */}
       <Footer label1={"Privacy"} link1={"#"} label2={"Terms of Use"} link2={"#"} label3={"Accessibility"} link3={"#"} label4={"Cookies Policy"} link4={"#"} label5={"Regulatory Disclosures"} link5={"#"} textColor={"#1E3A8A"}         
       />
       </CenteredContainer>

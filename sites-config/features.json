@@ -1,8 +1,8 @@
 {
   "features": [
     {
-      "name": "professionals",
-      "streamId": "professionals",
+      "name": "locations",
+      "streamId": "locations",
       "templateType": "JS",
       "entityPageSet": {
         "plugin": {}
@@ -18,7 +18,7 @@
   ],
   "streams": [
     {
-      "$id": "professionals",
+      "$id": "locations",
       "localization": {
         "locales": [
           "en"
@@ -27,16 +27,14 @@
       },
       "filter": {
         "entityTypes": [
-          "financialProfessional"
+          "location"
         ]
       },
       "fields": [
         "name",
         "description",
-        "headshot",
         "slug",
         "photoGallery",
-        "fins_jobTitle",
         "logo",
         "fins_relatedServices.name",
         "emails",

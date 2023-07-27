@@ -53,8 +53,8 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   
   return (
     <>
-    <a href="/fins_professional1" target = "_blank" rel="noreferrer">
-      <h1 className="font-extrabold hover:underline hover:text-blue-900">Click here to view a sample advisor page</h1>
+    <a href="/fins_location2" target = "_blank" rel="noreferrer">
+      <h1 className="font-extrabold hover:underline hover:text-blue-900">Click here to view a sample location page</h1>
       </a>
     </>
   );

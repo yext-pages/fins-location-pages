@@ -19,11 +19,6 @@ export interface ComplexImage {
 	clickthroughUrl?: string,
 }
 
-export interface EntityReference {
-	entityId: string,
-	name: string,
-}
-
 export interface Address {
 	line1?: string,
 	line2?: string,
@@ -41,17 +36,28 @@ export interface Coordinate {
 	longitude?: number,
 }
 
-export default interface Professionals {
+export interface Fins_relatedServices {
+	name?: string,
+	description?: string,
+	fins_servicesImage?: Image,
+}
+
+export interface Fins_featuredArticles {
+	name?: string,
+	shortDescription?: string,
+	fins_articlePhoto?: ComplexImage,
+}
+
+export default interface Locations {
 	name: string,
 	description: string,
-	headshot: Image,
 	slug: string,
 	photoGallery: ComplexImage[],
-	fins_jobTitle: string,
 	logo: ComplexImage,
-	fins_relatedServices: EntityReference[],
 	emails: string[],
 	address: Address,
 	mainPhone: any,
 	geocodedCoordinate: Coordinate,
+	fins_relatedServices: Fins_relatedServices[],
+	fins_featuredArticles: Fins_featuredArticles[],
 }
