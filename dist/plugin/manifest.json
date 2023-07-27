@@ -1,6 +1,6 @@
 {
   "bundlePaths": {
-    "locations": "assets/server/locations.e5c2a28d.js",
+    "locations": "assets/server/locations.f317b59b.js",
     "homepage": "assets/server/static.ff3f2c8c.js"
   },
   "projectFilepaths": {
@@ -19,7 +19,7 @@
       ]
     },
     "src/templates/locations.tsx": {
-      "file": "assets/server/locations.e5c2a28d.js",
+      "file": "assets/server/locations.f317b59b.js",
       "src": "src/templates/locations.tsx",
       "isEntry": true,
       "imports": [
@@ -32,7 +32,7 @@
       ]
     },
     "dist/hydration_templates/locations.tsx": {
-      "file": "assets/hydrate/locations.e1bf0568.js",
+      "file": "assets/hydrate/locations.2b851207.js",
       "src": "dist/hydration_templates/locations.tsx",
       "isEntry": true,
       "imports": [

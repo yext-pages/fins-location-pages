@@ -15,6 +15,8 @@ import { LocationMap } from "@yext/pages/components";
 import { GoogleMaps } from "@yext/components-tsx-maps";
 import Articles from "../components/Articles";
 import MapDescription from "../components/MapDescription";
+import ItemsGrid from "../components/ItemsGrid";
+import Item from "../components/Item";
 export const config: TemplateConfig = {
   stream: {
     $id: "locations",
@@ -59,7 +61,7 @@ export default function Professional({ document, __meta }: TemplateProps) {
         logo={document.logo.image.url}
         backgroundColor="#fff"
         />
-          {/* <HorizontalStack
+          <HorizontalStack
             spacing="1"
             topMargin="0"
             bottomMargin="0"
@@ -70,14 +72,9 @@ export default function Professional({ document, __meta }: TemplateProps) {
             backgroundColor="#1C2E5E"
             backgroundImage={document.photoGallery[0]?.image.url}          
             >
-            <HeroImage
-              src={`${document.headshot.url}`}
-              alt={`${document.headshot.alternateText}`}
-              leftPadding="20"
-            />
         <ContactInfo
         name={document.name}
-        title={document.fins_jobTitle}
+        title={document.name}
         addressLine1={document.address.line1}
         addressLine2={`${document.address.city}, ${document.address.region} ${document.address.postalCode}`}
         email={document.emails[0]}
@@ -85,8 +82,8 @@ export default function Professional({ document, __meta }: TemplateProps) {
         textColor="#fff"
         >       
         </ContactInfo>
-        </HorizontalStack> */}
-        {/* <VerticalStack
+        </HorizontalStack>
+        <VerticalStack
           alignment="left"
           rightMargin="0"
           leftMargin="0"
@@ -109,8 +106,8 @@ export default function Professional({ document, __meta }: TemplateProps) {
             fontWeight="normal"
             bottomMargin="6"
           />
-        </VerticalStack> */}
-        {/* <ItemsGrid 
+        </VerticalStack>
+        <ItemsGrid 
         title="Services Offered"
         columns={3}>
           <Item
@@ -128,7 +125,7 @@ export default function Professional({ document, __meta }: TemplateProps) {
             image={document.fins_relatedServices[2]?.fins_servicesImage.url}
             description={document.fins_relatedServices[2]?.description}
           />
-        </ItemsGrid> */}
+        </ItemsGrid>
         <Title
             value={`Insights`}
             textSize="4xl"
@@ -147,7 +144,7 @@ export default function Professional({ document, __meta }: TemplateProps) {
             backgroundColor="#F9FAFB"
             textColor="#1C2E5E"
           />
-        {/* <GridContainer
+        <GridContainer
         backgroundColor="#F9FAFB"
         >
 
@@ -182,8 +179,8 @@ export default function Professional({ document, __meta }: TemplateProps) {
         fill="white"
       />
     </svg>}
-            </LocationMap> */}
-        {/* </GridContainer> */}
+            </LocationMap>
+        </GridContainer>
       <Footer label1={"Privacy"} link1={"#"} label2={"Terms of Use"} link2={"#"} label3={"Accessibility"} link3={"#"} label4={"Cookies Policy"} link4={"#"} label5={"Regulatory Disclosures"} link5={"#"} textColor={"#1E3A8A"}         
       />
       </CenteredContainer>
