@@ -48,6 +48,13 @@ export interface Fins_featuredArticles {
 	fins_articlePhoto?: ComplexImage,
 }
 
+export interface Fins_relatedProfessionals {
+	name?: string,
+	headshot?: Image,
+	fins_jobTitle?: string,
+	description?: string,
+}
+
 export default interface Locations {
 	name: string,
 	description: string,
@@ -60,4 +67,5 @@ export default interface Locations {
 	geocodedCoordinate: Coordinate,
 	fins_relatedServices: Fins_relatedServices[],
 	fins_featuredArticles: Fins_featuredArticles[],
+	fins_relatedProfessionals: Fins_relatedProfessionals[],
 }

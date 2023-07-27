@@ -1,6 +1,6 @@
 {
   "bundlePaths": {
-    "locations": "assets/server/locations.b09437e3.js",
+    "locations": "assets/server/locations.b5619b3c.js",
     "homepage": "assets/server/static.ff3f2c8c.js"
   },
   "projectFilepaths": {
@@ -19,7 +19,7 @@
       ]
     },
     "src/templates/locations.tsx": {
-      "file": "assets/server/locations.b09437e3.js",
+      "file": "assets/server/locations.b5619b3c.js",
       "src": "src/templates/locations.tsx",
       "isEntry": true,
       "imports": [
@@ -28,11 +28,11 @@
         "_index-962f16ab.js"
       ],
       "css": [
-        "assets/static/locations-c05607bd.css"
+        "assets/static/locations-b20d6a75.css"
       ]
     },
     "dist/hydration_templates/locations.tsx": {
-      "file": "assets/hydrate/locations.ecb4f915.js",
+      "file": "assets/hydrate/locations.a07326f7.js",
       "src": "dist/hydration_templates/locations.tsx",
       "isEntry": true,
       "imports": [
@@ -78,7 +78,7 @@
       ]
     },
     "src/templates/locations.css": {
-      "file": "assets/static/locations-c05607bd.css",
+      "file": "assets/static/locations-b20d6a75.css",
       "src": "src/templates/locations.css"
     }
   }

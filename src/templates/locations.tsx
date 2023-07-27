@@ -23,7 +23,7 @@ export const config: TemplateConfig = {
     $id: "locations",
     localization: { locales: ["en"], primary: false },
     filter: { entityTypes: ["location"] },
-    fields: ["name", "description", "slug", "photoGallery", "logo", "fins_relatedServices.name", "emails", "address", "mainPhone", "geocodedCoordinate", "fins_relatedServices.description", "fins_relatedServices.fins_servicesImage", "fins_featuredArticles.name", "fins_featuredArticles.shortDescription", "fins_featuredArticles.fins_articlePhoto", "fins_relatedProfessionals.name", "fins_relatedProfessionals.headshot", "fins_relatedProfessionals.fins_jobTitle", "fins_relatedProfessionals.description", "fins_relatedProfessionals.emails"],
+    fields: ["name", "description", "slug", "photoGallery", "logo", "fins_relatedServices.name", "emails", "address", "mainPhone", "geocodedCoordinate", "fins_relatedServices.description", "fins_relatedServices.fins_servicesImage", "fins_featuredArticles.name", "fins_featuredArticles.fins_articleDescription", "fins_featuredArticles.fins_articlePhoto", "fins_relatedProfessionals.name", "fins_relatedProfessionals.headshot", "fins_relatedProfessionals.fins_jobTitle", "fins_relatedProfessionals.description", "fins_relatedProfessionals.emails"],
   },
 };
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
